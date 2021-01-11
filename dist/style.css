@@ -1,0 +1,204 @@
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:not(.container), input {
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex.between {
+  justify-content: space-between;
+}
+.flex.middle {
+  align-items: center;
+}
+.flex.wrap {
+  flex-wrap: wrap;
+}
+.flex.stretch {
+  align-items: stretch;
+}
+.flex section.box.main, .flex div.box.main {
+  width: 68%;
+}
+.flex section.box.aside, .flex div.box.aside {
+  min-width: 30%;
+  flex-shrink: 0;
+}
+.flex section.box.half, .flex div.box.half {
+  width: 50%;
+}
+.flex section.box:not(.full) + .box, .flex div.box:not(.full) + .box {
+  margin-left: 30px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.container.bigger {
+  max-width: 1200px;
+}
+
+header.container {
+  padding: 40px 25px;
+  font-size: 1.5rem;
+}
+header.container h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#featured-text {
+  margin-top: 100px;
+  padding: 50px 25px;
+}
+#featured-text h2 {
+  max-width: 800px;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+#featured-text h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 25px;
+  color: #222;
+}
+#featured-text ul {
+  margin-top: 60px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+#featured-text ul li {
+  display: inline-block;
+}
+#featured-text ul li + li {
+  margin-left: 35px;
+}
+#featured-text ul li a {
+  display: block;
+}
+#featured-text ul li a:after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  width: 0;
+  border-bottom: 2px solid;
+  transition: 0.3s ease;
+}
+#featured-text ul li a:hover:after {
+  width: 100%;
+}
+
+#portfolio {
+  margin-top: 120px;
+}
+#portfolio .item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+#portfolio .item h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+#portfolio .item h4.fields {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 400;
+}
+#portfolio .item h4.fields span {
+  display: inline-block;
+}
+#portfolio .item h4.fields span + span {
+  margin-left: 10px;
+}
+@media screen and (min-width: 681px) {
+  #portfolio .item {
+    width: 47.5%;
+  }
+  #portfolio .item:nth-child(even) {
+    margin-left: 5%;
+  }
+  #portfolio .item:nth-child(n+3) {
+    margin-top: 55px;
+  }
+}
+@media screen and (max-width: 680px) {
+  #portfolio .item + .item {
+    margin-top: 50px;
+  }
+}
+#portfolio .item:hover img {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+footer {
+  margin-top: 120px;
+  padding: 50px 25px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+footer h4 {
+  font-size: 3.2rem;
+}
+footer p {
+  max-width: 500px;
+  margin: 15px auto 30px;
+}
+footer ul li {
+  font-size: 26px;
+  display: inline-block;
+}
+footer ul li + li {
+  margin-left: 30px;
+}

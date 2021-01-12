@@ -74,8 +74,13 @@ header.container {
   font-size: 1.5rem;
 }
 header.container h1 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  header.container {
+    display: block;
+  }
 }
 
 #featured-text {
@@ -118,6 +123,17 @@ header.container h1 {
 }
 #featured-text ul li a:hover:after {
   width: 100%;
+}
+@media screen and (max-width: 480px) {
+  #featured-text {
+    margin-top: 0;
+  }
+  #featured-text h2 {
+    font-size: 3rem;
+  }
+  #featured-text h3 {
+    font-size: 1.8rem;
+  }
 }
 
 #portfolio {
@@ -162,12 +178,17 @@ header.container h1 {
 }
 @media screen and (max-width: 680px) {
   #portfolio .item + .item {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 #portfolio .item:hover img {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
+}
+@media screen and (max-width: 480px) {
+  #portfolio {
+    margin-top: 20px;
+  }
 }
 
 footer {

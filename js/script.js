@@ -7,7 +7,13 @@ var app = new Vue({
    data: {
     token: 'hPtURsKeMhh77wTjmzfeLxiM07RuDPN9',
     user: 'thomaskauai',
-    portfolioJson: []
+    portfolioJson: [],
+    links: {
+      behance: 'https://www.behance.net/thomaskauai',
+      linkedin: 'https://www.linkedin.com/in/thomaskauai/',
+      instagram: 'https://www.instagram.com/thomaskauai/',
+      resume: '/assets/curriculo-thomas-2021.pdf',
+    }
    },
  
    mounted() {  
@@ -24,7 +30,7 @@ var app = new Vue({
      .then(function(response) {
        return response.json()
      }).then(function(data) {
-       app.portfolioJson = data['projects'];              
+       app.portfolioJson = data['projects'];
        Vue.ls.set('portfolioJson', JSON.stringify(data['projects']), 60 * 60 * 1000);
       console.log('salvou');
      }).catch(function(ex) {

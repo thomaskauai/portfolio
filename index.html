@@ -19,39 +19,37 @@
   </header>  
 
   <section id="featured-text" class="container">
-  <h2>A Product Designer working on Curitiba that also loves Front End. I enjoy creating pleasant experiences centered on users.</h2>
-  <h3>Open for new job experiences</h3>
-  <ul>    
-    <li><a target="_blank" :href="links.resume">Full Resume</a></li>
-    <li><a target="_blank" :href="links.behance">Behance</a></li>
-    <li><a target="_blank" :href="links.linkedin">LinkedIn</a></li>
-  </ul>
+    <h2>A Product Designer working on Curitiba that also loves Front End. I enjoy creating pleasant experiences centered on users.</h2>
+    <h3>Open for new job experiences</h3>
+    <ul>    
+      <li><a target="_blank" :href="links.resume">Full Resume</a></li>
+      <li><a target="_blank" :href="links.behance">Behance</a></li>
+      <li><a target="_blank" :href="links.linkedin">LinkedIn</a></li>
+    </ul>
   </section>
   
   <section id="portfolio" class="container flex wrap">
-  <div class="item" v-for="(item, index) in portfolioJson" v-if="index < 6">
-    <a v-bind:href="item.url" target="_blank">
-    <img v-bind:src="item.covers.max_808">
-    <h3>{{item.name}}</h3>
-    <h4 class="fields"><span v-for="field in item.fields">{{field}}</span></h4>
-    </a>
-  </div>
+    <div class="item" v-for="(item, index) in portfolioJson" v-if="index < 6">
+      <a v-bind:href="item.url" target="_blank">
+        <img v-bind:src="item.covers.max_808">
+        <h3>{{item.name}}</h3>
+        <h4 class="fields"><span v-for="field in item.fields">{{field}}</span></h4>
+      </a>
+    </div>
   </section>
   
-  <!--  {{portfolio}} --> 
-  </section>
-
+  <!--  {{portfolio}} -->  
   <footer>
-  <h4>Let's connect</h4>
-  <p>Fell free to contact me if you have some great job opportunities or just have something to talk (;</p>
-  <ul class="social">
-    <li><a target="_blank" :href="links.linkedin"><i class="fa fa-linkedin"></i></a></li>
-    <li><a target="_blank" :href="links.behance"><i class="fa fa-behance"></i></a></li>
-    <li><a target="_blank" :href="links.instagram"><i class="fa fa-instagram"></i></a></li>
-  </ul>
+    <h4>Let's connect</h4>
+    <p>Fell free to contact me if you have some great job opportunities or just have something to talk (;</p>
+    <ul class="social">
+      <li><a target="_blank" :href="links.linkedin"><i class="fa fa-linkedin"></i></a></li>
+      <li><a target="_blank" :href="links.behance"><i class="fa fa-behance"></i></a></li>
+      <li><a target="_blank" :href="links.instagram"><i class="fa fa-instagram"></i></a></li>
+    </ul>
   </footer>
 
-</section>
+</section><!--#app-->
 
 <!-- include js -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>

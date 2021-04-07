@@ -12,7 +12,7 @@ var app = new Vue({
       behance: 'https://www.behance.net/thomaskauai',
       linkedin: 'https://www.linkedin.com/in/thomaskauai/',
       instagram: 'https://www.instagram.com/thomaskauai/',
-      resume: '/assets/curriculo-thomas-2021.pdf',
+      resume: 'assets/curriculo-thomas-2021.pdf',
     }
    },
  

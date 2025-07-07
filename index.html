@@ -20,9 +20,10 @@
   </header>  
 
   <section id="featured-text" class="container">
-    <h2>I'm a Product Designer working at Curitiba. I enjoy creating pleasant experiences centered on users.</h2>
-    <!--    <h2>I'm a Product Designer working at Curitiba who also loves Front End. I enjoy creating pleasant experiences centered on users.</h2> -->
-    <h3>Available for new job experiences</h3>
+    <!-- <h2>Product Designer morando em Curitiba. Gosto de criar experiências agradáveis centradas no usuário<h2> -->
+    <h2>Product Designer morando em Curitiba. Crio experiências digitais que geram impactos reais<h2>
+    <!--   I'm a Product Designer based at Curitiba. I enjoy creating pleasant experiences centered on users.  -->
+    <h3>Aberto a novas experiências profissionais</h3>
     <ul>    
       <li><a target="_blank" :href="links.resume">Full Resume</a></li>
       <li><a target="_blank" :href="links.behance">Behance</a></li>
@@ -30,6 +31,7 @@
     </ul>
   </section>
   
+  <!--  {{portfolio}} -->  
   <section id="portfolio" class="container flex wrap">
     <div class="item" v-for="(item, index) in portfolioJson" v-if="index < 6">
       <a v-bind:href="item.url" target="_blank">
@@ -39,11 +41,63 @@
       </a>
     </div>
   </section>
-  
   <!--  {{portfolio}} -->  
+
+  <section id="resume">
+    <section class="container flex between">
+      <article class="box main experiencias">
+        <h2>Últimas Experiências</h2>
+  
+        <div
+          v-for="(exp, index) in experiencias"
+          :key="'exp-' + index"
+          class="experiencia"
+        >
+          <h3 class="cargo">{{ exp.cargo }}</h3>
+          <p v-if="exp.empresa" class="empresa-data">{{ exp.empresa }} <span v-if="exp.periodo">• {{ exp.periodo }}</span></p>
+          <p class="descricao">{{ exp.descricao }}</p>
+        </div>
+      </article>
+  
+      <aside class="box aside formacao-cursos">
+        <div class="formacao">
+          <h2>Formação</h2>
+  
+          <div
+            v-for="(f, index) in formacoes"
+            :key="'form-' + index"
+            class="item"
+          >
+            <p class="data">{{ f.periodo }}</p>
+            <h3 class="titulo">{{ f.titulo }}</h3>
+            <p class="instituicao">{{ f.instituicao }}</p>
+          </div>
+        </div>
+  
+        <hr />
+  
+        <div class="cursos">
+          <h2>Cursos</h2>
+  
+          <div
+            v-for="(c, index) in cursos"
+            :key="'curso-' + index"
+            class="item"
+          >
+            <p class="data">{{ c.data }}</p>
+            <h3 class="titulo">{{ c.nome }}</h3>
+            <p class="instituicao">{{ c.instituicao }}</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </section>
+  
+  
+
   <footer>
-    <h4>Let's connect</h4>
-    <p>Fell free to contact me if you have some great job opportunities or just have something to talk (;</p>
+    <h4>Vamos nos conectar</h4>
+    <p>Fique à vontade para me contatar se tiver ótimas oportunidades de trabalho ou só quiser bater um papo (;</p>
     <ul class="social">
       <li><a target="_blank" :href="links.linkedin"><i class="fa fa-linkedin"></i></a></li>
       <li><a target="_blank" :href="links.behance"><i class="fa fa-behance"></i></a></li>
@@ -52,6 +106,7 @@
   </footer>
 
 </section><!--#app-->
+
 
 <!-- include js -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
